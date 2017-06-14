@@ -1,0 +1,21 @@
+{
+    "name": "fractal-vscode-extension",
+    "publisher": "carloslfu",
+    "description": "Fractal framework extension",
+    "version": "0.0.1",
+    "engines": { "vscode": "0.10.x" },
+    "categories": ["Snippets"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FractalBlocks/Fractal-vscode-extension.git"
+    },
+    "author": "Carlos Galarza <carloslfu@gmail.com>",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
+            }
+        ]
+    }
+}
