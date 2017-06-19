@@ -84,8 +84,8 @@
 			"",
 			"// Hot reload - DEV ONLY",
 			"if (module.hot) {",
-			"\tmodule.hot.accept('./root', () => {",
-			"\t\tlet m = require('./root')",
+			"\tmodule.hot.accept('./Root', () => {",
+			"\t\tlet m = require('./Root')",
 			"\t\tapp.moduleAPI.reattach(<any> m, mergeStates)",
 			"\t})",
 			"}"
