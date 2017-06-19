@@ -57,7 +57,7 @@
 		"prefix": "fmod",
 		"body": [
 			"import {",
-			"\trun",
+			"\trun,",
 			"\t// DEV",
 			"\tlogFns,",
 			"\tmergeStates,",
