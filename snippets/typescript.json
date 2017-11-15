@@ -98,6 +98,41 @@
 			""
 		],
 		"description": "Basic Fractal Module snippet"
+	},
+	"Fractal HMR": {
+		"prefix": "fhmr",
+		"body": [
+			"import {",
+			"\thotSwap",
+			"} from 'fractal-core'",
+			"",
+			"declare const FuseBox",
+			"",
+			"if (process.env.ENV === 'development') {",
+			"\tconst customizedHMRPlugin = {",
+			"\t\thmrUpdate: async data => {",
+			"\t\t\tif (data.type === 'js') {",
+			"\t\t\t\tFuseBox.flush()",
+			"\t\t\t\tFuseBox.dynamic(data.path, data.content)",
+			"\t\t\t\tif (FuseBox.mainFile && data.path.includes('Root')) {",
+			"\t\t\t\t\tlet Root = await import('./Root')",
+			"\t\t\t\t\t;(window as any).app = await (window as any).app.moduleAPI.attach(Root, (window as any).app, hotSwap)",
+			"\t\t\t\t} else if (FuseBox.mainFile) {",
+			"\t\t\t\t\t;(window as any).app.moduleAPI.dispose()",
+			"\t\t\t\t\tFuseBox.import(FuseBox.mainFile)",
+			"\t\t\t\t}",
+			"\t\t\t\treturn true",
+			"\t\t\t}",
+			"\t\t}",
+			"\t}",
+			"\tif (!process.env.hmrRegistered) {",
+			"\t\tprocess.env.hmrRegistered = <any> false",
+			"\t\tFuseBox.addPlugin(customizedHMRPlugin)",
+			"\t}",
+			"}",
+			""			  
+		],
+		"description": "Fractal Hot Module Replacement"
 	}
 
 }
