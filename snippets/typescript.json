@@ -25,7 +25,7 @@
 			"",
   			"\treturn h('div', {",
 			"\t\tkey: F.ctx.name,",
-			"\t\tclass: { [style.base]: true },",
+			"\t\tclass: style('base'),",
   			"\t}, [",
 			"\t\t$1",
   			"\t])",
@@ -48,7 +48,7 @@
 	},
 	"Fractal Vnode": {
 		"prefix": "fvnode",
-		"body": "h('$1', {class: { [style.$2]: true }}, [$3])",
+		"body": "h('$1', { class: style('$2') }, [$3])",
 		"description": "Fractal Vnode"
 	},
 	"Fractal Index": {
