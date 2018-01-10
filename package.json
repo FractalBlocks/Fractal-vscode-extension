@@ -2,8 +2,8 @@
     "name": "fractal-vscode-extension",
     "publisher": "carloslfu",
     "description": "Fractal framework extension",
-    "version": "0.0.15",
-    "engines": { "vscode": "1.18.x" },
+    "version": "0.0.16",
+    "engines": { "vscode": "1.19.x" },
     "categories": ["Snippets"],
     "repository": {
         "type": "git",
